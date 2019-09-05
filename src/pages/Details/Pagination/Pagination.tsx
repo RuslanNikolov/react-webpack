@@ -1,6 +1,5 @@
 import * as React from "react";
-import LeftArrowSVG from "./assets/LeftArrow.svg";
-import RightArrowSVG from "./assets/RightArrow.svg";
+import assets from "./assets";;
 import styled from "styled-components";
 
 const pages: number[] = [1, 2, 3, 4];
@@ -12,13 +11,13 @@ interface IProps {
 const Pagination = (props: IProps) => {
   return (
     <Wrapper>
-      <LeftArrow src={LeftArrowSVG} alt='left arrow' />
+      <LeftArrow src={assets.LeftArrowSVG} alt='left arrow' />
       <NumbersBox>
         {pages.map(page => (
           <Number isHighlighted={page === props.pageHighlighted}>{page}</Number>
         ))}
       </NumbersBox>
-      <RightArrow src={RightArrowSVG} alt='right arrow' />
+      <RightArrow src={assets.RightArrowSVG} alt='right arrow' />
     </Wrapper>
   );
 };

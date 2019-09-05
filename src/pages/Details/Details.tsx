@@ -1,5 +1,5 @@
 import * as React from "react";
-import LeftArrowSVG from "./assets/LeftArrow.svg";
+import assets from "./assets";
 import IssueCard from "./IssueCard/IssueCard";
 import IssueCardsMock from "./IssueCard/IssueCardsMock";
 import Pagination from "./Pagination/Pagination";
@@ -10,7 +10,7 @@ const Details = () => {
   return (
     <StyledMain>
       <BackButton>
-        <LeftArrow src={LeftArrowSVG} alt='left arrow' />
+        <LeftArrow src={assets.LeftArrowSVG} alt='left arrow' />
         go back
       </BackButton>
 

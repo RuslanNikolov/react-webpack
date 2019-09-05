@@ -21,19 +21,11 @@ module.exports = {
             { test: /\.tsx?$/, use: { loader: "ts-loader" } },
             { test: /\.css$/, use: { loader: 'css-loader' } },
             {
-                test: /\.svg$/,
-                use: [
-                    {
-                        loader: "babel-loader"
-                    },
-                    {
-                        loader: "react-svg-loader",
-                        options: {
-                            jsx: true
-                        }
-                    }
-                ]
-            }
+                test: /\.(png|svg|jpg|gif)$/,
+                use: {
+                    loader: 'file-loader',
+                },
+            },
         ]
     },
     plugins: [

@@ -1,8 +1,7 @@
 import * as React from "react";
 import { useState, ChangeEvent, useRef } from "react";
 import { Hyperlink } from "../../App";
-import Ellipse from "./Ellipse.svg";
-import SearchIconSVG from "./SearchIcon.svg";
+import assets from "./assets";
 import styled from "styled-components";
 import Button from "../Button/Button";
 import Input from "../Input/Input";
@@ -16,10 +15,9 @@ const Header: React.FC = () => {
   };
 
   const focusSearchInput = (): void => (searchInputRef.current as any).focus();
-
   return (
     <StyledHeader>
-      <Logo src={Ellipse} alt='logo' />
+      <Logo src={assets.EllipseSVG} alt='logo' />
       <TitleWrapper>
         <Title>Github Repo Explorer</Title>
         <SubTitle>
@@ -28,7 +26,7 @@ const Header: React.FC = () => {
       </TitleWrapper>
 
       <SearchInputWrapper>
-        <SearchIcon src={SearchIconSVG} onClick={focusSearchInput} />
+        <SearchIcon src={assets.SearchIconSVG} onClick={focusSearchInput} />
         <SearchInput
           ref={searchInputRef}
           placeholder='Search for a github repo'
